@@ -40,15 +40,21 @@ $tap = new TapHelper();
 						<?php 
 						foreach ($tests as $index => $test) : 
 							$row_class = ($tap->testStatus($test) === 'ok') ? "ok $uuid" : 'notok';
+							$row_span = $row_class === 'notok' ? '3' : '2';
 						?>
 						
 						<tr class="<?= $row_class; ?>">
-							<td rowspan="2"><?= $index; ?></td>
+							<td rowspan="<?= $row_span; ?>"><?= $index; ?></td>
 							<td><?= $tap->testTime($test); ?></td>
 						</tr>
 						<tr class="<?= $row_class; ?>">
 							<td><?= $tap->testData($test); ?></td>
 						</tr>
+						<?php if ($row_class === 'notok') : ?>
+						<tr class="outcome">
+							<td><pre><?= $tap->testOutcome($test); ?></pre></td>
+						</tr>
+						<?php endif; ?>
 						
 						<?php endforeach; ?>
 						

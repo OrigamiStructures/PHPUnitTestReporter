@@ -251,6 +251,10 @@ class TapHelper {
 		return $test['data'];
 	}
 	
+	public function testOutcome($test) {
+		return $test['outcome'];
+	}
+	
 	/**
 	 * Get the status of this test
 	 * 

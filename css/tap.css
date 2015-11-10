@@ -29,6 +29,15 @@ h2.function {
 h2.function.ok {
 	background-color: darkseagreen;
 }
+h2.function.notok {
+	border: thin solid firebrick;
+}
+h2.function.notok, tr.outcome {
+	background-color: gold;
+}
+tr.notok {
+	background-color: palegoldenrod;
+}
 table {
 	width: 90%;
 }
