@@ -1,0 +1,37 @@
+th, td {
+	text-align: left;
+	border: thin solid #888;
+    padding: 0.1em 0.5em;
+}
+th {
+	background-color: #ddd;
+}
+*.notok {
+	color: firebrick;
+}
+h1, h2, h3 {
+/*	padding: 0;
+	margin: 0;*/
+	font-size: 14px;
+	width: 90%;
+}
+h1 {
+	font-size: 120%;
+	margin-top: .3em;
+}
+h2 {
+	margin: .1em 0;
+	padding: .3em .5em;
+}
+h2.function {
+	cursor: pointer;
+}
+h2.function.ok {
+	background-color: darkseagreen;
+}
+table {
+	width: 90%;
+}
+tr.ok {
+	display: none;
+}
