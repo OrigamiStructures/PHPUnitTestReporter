@@ -190,8 +190,7 @@ class TapHelper {
 	 */
 	protected function parseTest($line) {
 		list($test_result, $this->script, $this->function, $this->test_count, $arguments) = 
-				preg_split($this->split_pattern, $line) + 
-				['empty', 'empty', 'empty', '0', ''];
+				preg_split($this->split_pattern, $line) +  ['', '', '', '0', ''];
 		
 		$this->script = trim(str_replace('Failure: ', '', $this->script));
 		$this->function = trim($this->function);
@@ -203,7 +202,6 @@ class TapHelper {
 		} else {
 			$this->result[$this->script][$this->function][$this->test_count] = ['status' => $test_result, 'data' => $arguments];
 		}
-		unset($this->result['empty']);
 	}
 	
 	/**
@@ -213,10 +211,9 @@ class TapHelper {
 	 * @return string 'ok' or 'notok'
 	 */
 	public function functionStatus($tests) {
-		$status = array_map(function($value){
-			return $value['status'];
-		}, $tests);
-		return preg_match('/not/', implode('', $status)) === 0 ? 'ok' : 'notok';
+		return array_reduce($tests,  function($boolean, $value){ 
+					return $boolean && ($value['status'] === 'ok');  
+				}, TRUE ) ?  'ok' :  'notok';
 	}
 	
 	/**
