@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-//$cmd = '/Library/WebServer/Documents/foldingTime/vendor/bin/phpunit --verbose --log-tap /Users/dondrake/Sites/ft/tap.txt --log-json /Users/dondrake/Sites/ft/json.txt plugins';
+//$cmd = '/Library/WebServer/Documents/foldingTime/vendor/bin/phpunit --verbose --log-tap /Users/dondrake/Sites/ft/tap.txt --log-json /Users/dondrake/Sites/ft/json.txt /Library/WebServer/Documents/foldingTime/plugins';
 // --testdox-html /Users/dondrake/Sites/ft/test.html		
 // --log-junit /Users/dondrake/Sites/ft/junit.txt
 include_once 'helper/TapHelper.php';
