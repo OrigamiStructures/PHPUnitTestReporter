@@ -44,7 +44,7 @@ $tap = new TapHelper();
 						?>
 						
 						<tr class="<?= $row_class; ?>">
-							<td rowspan="<?= $row_span; ?>"><?= $index; ?></td>
+							<td class="index" rowspan="<?= $row_span; ?>"><?= $index; ?></td>
 							<td><?= $tap->testTime($test); ?></td>
 						</tr>
 						<tr class="<?= $row_class; ?>">
