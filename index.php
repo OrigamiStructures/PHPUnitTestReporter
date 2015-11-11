@@ -50,9 +50,12 @@ $tap = new TapHelper();
 						<tr class="<?= $row_class; ?>">
 							<td><?= $tap->testData($test); ?></td>
 						</tr>
-						<?php if ($row_class === 'notok') : ?>
+						<?php 
+						$outcome = $tap->testOutcome($test);
+						if ($outcome) : 
+						?>
 						<tr class="outcome">
-							<td><pre><?= $tap->testOutcome($test); ?></pre></td>
+							<td><pre><?= $outcome; ?></pre></td>
 						</tr>
 						<?php endif; ?>
 						

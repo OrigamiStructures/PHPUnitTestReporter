@@ -74,7 +74,7 @@ class TapHelper {
 	 * Loop through the tap file and create a report array for output parsing
 	 */
 	public function __construct() {
-		$this->tap_handle = fopen('tap.txt', 'r');
+		$this->tap_handle = fopen('data/tap.txt', 'r');
 
 		while ($line = fgets($this->tap_handle)) {
 
@@ -100,7 +100,7 @@ class TapHelper {
 		fclose($this->tap_handle);
 		
 		// now add time entries to the test array
-		$this->json_handle = fopen('json.txt', 'r');
+		$this->json_handle = fopen('data/json.txt', 'r');
 		
 		// look for a 'test' entry in the json file
 		while ($line = fgets($this->json_handle)) {
@@ -249,7 +249,7 @@ class TapHelper {
 	}
 	
 	public function testOutcome($test) {
-		return $test['outcome'];
+		return isset($test['outcome']) ? $test['outcome'] : FALSE;
 	}
 	
 	/**
