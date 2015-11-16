@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <?php
+//  Sample commands
+//  To generate coverage reports as an html site
+//  vendor/bin/phpunit --coverage-html /Users/dondrake/Sites/ft/coverage.html plugins
+//  
+//  to generate the tap and json files to drive this page
+//  vendor/bin/phpunit --log-tap /Users/dondrake/Sites/ft/data/tap.txt --log-json /Users/dondrake/Sites/ft/data/json.txt plugins 
+  
+
 //$cmd = '/Library/WebServer/Documents/foldingTime/vendor/bin/phpunit --verbose --log-tap /Users/dondrake/Sites/ft/tap.txt --log-json /Users/dondrake/Sites/ft/json.txt /Library/WebServer/Documents/foldingTime/plugins';
 // --testdox-html /Users/dondrake/Sites/ft/test.html		
 // --log-junit /Users/dondrake/Sites/ft/junit.txt
