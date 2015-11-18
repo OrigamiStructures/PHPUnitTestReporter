@@ -180,6 +180,7 @@ class TapHelper {
 	 * @param string $line
 	 */
 	protected function multilineData($line) {
+//		var_dump($this->result[$this->script][$this->function][$this->test_count]);
 		$this->result[$this->script][$this->function][$this->test_count][1] .= $line;
 	}
 	

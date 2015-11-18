@@ -7,13 +7,21 @@
 //  to generate the tap and json files to drive this page
 //  vendor/bin/phpunit --log-tap /Users/dondrake/Sites/ft/data/tap.txt --log-json /Users/dondrake/Sites/ft/data/json.txt plugins 
   
+require '/Library/WebServer/Documents/foldingTime/vendor/autoload.php';
 
-//$cmd = '/Library/WebServer/Documents/foldingTime/vendor/bin/phpunit --verbose --log-tap /Users/dondrake/Sites/ft/tap.txt --log-json /Users/dondrake/Sites/ft/json.txt /Library/WebServer/Documents/foldingTime/plugins';
+//$cmd = '/Library/WebServer/Documents/foldingTime/vendor/bin/phpunit --log-tap /Users/dondrake/Sites/ft/data/tap.txt --log-json /Users/dondrake/Sites/ft/data/json.txt /Library/WebServer/Documents/foldingTime/plugins';
+
+$cmd = "cd /Library/WebServer/Documents/foldingTime/\n"
+		. "vendor/bin/phpunit --log-tap /Users/dondrake/Sites/ft/data/tap.txt --log-json /Users/dondrake/Sites/ft/data/json.txt plugins";
+$shell_output = shell_exec($cmd);
+//var_dump($shell_output);
+
+
 // --testdox-html /Users/dondrake/Sites/ft/test.html		
 // --log-junit /Users/dondrake/Sites/ft/junit.txt
+
 include_once 'helper/TapHelper.php';
 
-//$shell_output = shell_exec($cmd);
 $tap = new TapHelper();
 //var_dump($tap->result);
 //var_dump($tap->res);

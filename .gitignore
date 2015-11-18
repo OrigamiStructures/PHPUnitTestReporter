@@ -2,3 +2,5 @@ data/json.txt
 data/tap.txt
 nbproject/private/private.xml
 coverage.html
+data
+.DS_Store
