@@ -38,7 +38,7 @@ $tap = new TapHelper();
 		<link href="css/tap.css" type="text/css" rel="stylesheet">
 	</head>
 	<body>
-		<a href="coverage.html">Code Coverage</a>
+		<a href="coverage.php">Code Coverage</a>
 		<?php foreach ($tap->result as $script => $functions) : ?>
 		
 		<h1 class="script"><?= $script ?></h1>
